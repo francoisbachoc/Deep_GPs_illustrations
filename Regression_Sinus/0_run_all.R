@@ -28,7 +28,7 @@ source("3_plot_GP_exact.R")
 ##########
 #A simulation and its plot
 ##########
-sigmapar = 10 #GP standard deviation
+sigmapar = 4 #GP standard deviation
 lc = 0.2 #GP correlation length
 ##############
 name=paste("Regression_GPexact_sigma",sigmapar,"_lc",

@@ -4,7 +4,7 @@ load("parameters.Rdata")
 load("data.Rdata")
 
 #m times m covariance matrix of GP values at knots
-R1 = sigmapar*exp(- outer(Xm,Xm,"-")^2 / lc^2)
+R1 = sigmapar^2*exp(- outer(Xm,Xm,"-")^2 / lc^2)
 #Conditional mean of these values at knots
 ma1 = R1%*%t(Mn)%*%solve(Mn%*%R1%*%t(Mn)+sdn^2*diag(n))%*%y
 #and conditional covariance 
